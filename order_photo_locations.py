@@ -132,7 +132,7 @@ if '__main__' in __name__:
 	
 	zonder_datumdir = os.path.join(afbeeldingendir, 'no_date')  # destination to put dateless photo's
 	
-	aantal = 0
+	total_amount = 0
 	notOK  = 0
 	moved = 0
 	
@@ -163,7 +163,7 @@ if '__main__' in __name__:
 					moved += 1
 				except:
 					print "ERROR can't move %s to %s" % (f, destdir)
-				aantal += 1  # aantal is Dutch and means amount
+				total_amount += 1
 
 		else:  # no date tag present
 			#print f, dt
@@ -188,6 +188,6 @@ if '__main__' in __name__:
 						
 				notOK += 1
 				
-print aantal, "amount of photo's not in a date folder"
+print total_amount, "amount of photo's not in a date folder"
 print notOK, "amount from which no date could be found"
 print moved, "photos were moved to a new location"
