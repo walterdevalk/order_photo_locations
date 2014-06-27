@@ -99,9 +99,12 @@ def compare_date_with_folder(f, dt):
 	d,f = os.path.split(f)
 	d   = d.split(os.sep)
 	
-	day   = d[-1]
-	month = d[-2]
-	year  = d[-3]
+	try:
+		day   = d[-1]
+		month = d[-2]
+		year  = d[-3]
+	except IndexError:
+		return False
 	
 	# extract date from exiftag
 	try:	
