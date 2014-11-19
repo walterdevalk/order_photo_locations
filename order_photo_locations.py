@@ -8,7 +8,7 @@ Example:
 vacation/spain/1234422.JPG with date 2012:03:03 11:11:00
 will be moved to 2012/03/03/1234422.JPG
 
-
+blaat
 """
 
 __author__ = "Walter de Valk"
